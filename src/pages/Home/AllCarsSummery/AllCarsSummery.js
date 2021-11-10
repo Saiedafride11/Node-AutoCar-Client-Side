@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router';
 
-const CarSummery = (props) => {
+const AllCarsSummery = (props) => {
     const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
     const history = useHistory()
 
@@ -62,4 +62,4 @@ const CarSummery = (props) => {
     );
 };
 
-export default CarSummery;
+export default AllCarsSummery;
