@@ -7,7 +7,7 @@ const AddProducts = () => {
     document.title = 'Add Service';
 
     const onSubmit = data => {
-        fetch('https://cryptic-mountain-31100.herokuapp.com/tours', {
+        fetch('http://localhost:5000/cars', {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -15,7 +15,7 @@ const AddProducts = () => {
         .then(res => res.json())
         .then(result => {
             if(result.insertedId){
-               alert('Added successfully')
+                alert('Added successfully')
                 reset();
             }
         })
@@ -27,10 +27,15 @@ const AddProducts = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="text-center">
                     <input placeholder="Please Type Title" {...register("title")} required/>
                     <input placeholder="Please Type Price" {...register("price")} required/>
+                    <input placeholder="Please Type Offer" {...register("offer")} required/>
+                    <input placeholder="Please Type Petrol" {...register("petrol")} required/>
+                    <input placeholder="Please Type Km" {...register("km")} required/>
+                    <input placeholder="Please Type Manual" {...register("manual")} required/>
+                    <input placeholder="Please Type Car-Type" {...register("type")} required/>
+                    <input placeholder="Please Type Color" {...register("color")} required/>
+                    <input placeholder="Please Type Publish" {...register("publish")} required/>
                     <input placeholder="Please Type Ratting" {...register("ratting")} required/>
-                    <input placeholder="Please Type Day" {...register("day")} required/>
-                    <input placeholder="Please Type Person" {...register("person")} required/>
-                    <input placeholder="Please Type Location" {...register("location")} required/>
+                    <input placeholder="Please Type Sale" {...register("sale")} required/>
                     <input placeholder="Please Type Image Link" {...register("img")} required/>
                     <input type="submit" className="btn w-75 text-white"  style={{backgroundColor: '#1976d2'}}/>
                 </form>

@@ -22,7 +22,7 @@ const ManageProducts = () => {
                     :
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mb : 3 }}>
                         {
-                            cars?.slice(0, 6).map(car => <ManageProductsSummery car={car} key={car.key}></ManageProductsSummery>)
+                            cars?.slice(0, 6).map(car => <ManageProductsSummery car={car} key={car._id}></ManageProductsSummery>)
                         }
                     </Grid>
                 }

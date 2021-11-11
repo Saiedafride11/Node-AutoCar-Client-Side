@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
 
 const ManageProductsSummery = (props) => {
-    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
+    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _key} = props.car;
 
 
     const handleDeleteProducts = () => {

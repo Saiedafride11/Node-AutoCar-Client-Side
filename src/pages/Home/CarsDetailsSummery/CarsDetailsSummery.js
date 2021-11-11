@@ -13,12 +13,12 @@ import useAuth from '../../../hooks/useAuth';
 
 const CarsDetailsSummery = (props) => {
     const {user} = useAuth();
-    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
+    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _id} = props.car;
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-            data.status = "Pending"
-        fetch('https://cryptic-mountain-31100.herokuapp.com/orders', {
+        data.status = "Pending"
+        fetch('http://localhost:5000/orders', {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -83,7 +83,7 @@ const CarsDetailsSummery = (props) => {
                         <input defaultValue={user?.displayName} {...register("name")} style={{textTransform: "capitalize"}}required/>
                         <input defaultValue={user?.email} {...register("email")} readOnly/>
                         <input placeholder="Please Type Your Number....." {...register("phone")} type="number" required/>
-                        <select defaultValue="Tickets Type" {...register("ticket", { required: true, maxLength: 20 })}>
+                        <select defaultValue="Tickets Type" {...register("type", { required: true, maxLength: 20 })}>
                             <option value="type">Please Select Types.....</option>
                             <option value="bus">SPORTS CAR</option>
                             <option value="ship">COUPE</option>

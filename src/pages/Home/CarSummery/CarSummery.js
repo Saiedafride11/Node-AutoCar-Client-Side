@@ -12,11 +12,11 @@ import { useHistory } from 'react-router';
 import './CarSummery.css';
 
 const CarSummery = (props) => {
-    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
+    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _id} = props.car;
     const history = useHistory()
 
     const handlePurchase = () => {
-        history.push(`/car/${key}`)
+        history.push(`/car/${_id}`)
     }
     return (
         <Grid item xs={4} sm={4} md={4} className="img-scale-main">
