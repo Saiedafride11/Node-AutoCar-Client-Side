@@ -7,8 +7,9 @@ import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek } from '@fortawesome/free-solid-svg-icons'
+import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router';
+import './CarSummery.css';
 
 const CarSummery = (props) => {
     const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
@@ -18,8 +19,8 @@ const CarSummery = (props) => {
         history.push(`/car/${key}`)
     }
     return (
-        <Grid item xs={4} sm={4} md={4}>
-         <Card sx={{ minWidth: 275, border: 0, boxShadow: 3}}>
+        <Grid item xs={4} sm={4} md={4} className="img-scale-main">
+         <Card sx={{ minWidth: 275, border: 0, boxShadow: 3}} className="img-scale">
             <CardMedia
                 component="img"
                 style={{width: '102%', margin: '0 auto'}}
@@ -50,8 +51,11 @@ const CarSummery = (props) => {
                     <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>
                         <FontAwesomeIcon icon={faPalette} style={{color: '#1976d2'}}/> {color}
                     </Typography>
-                    <Typography variant="body2"  color="text.secondary">
+                    <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>
                         <FontAwesomeIcon icon={faCalendarWeek} style={{color: '#1976d2'}}/> {publish}
+                    </Typography>
+                    <Typography variant="body2"  color="text.secondary">
+                        <FontAwesomeIcon icon={faStar} style={{color: '#ffb400'}}/> {ratting}
                     </Typography>
                 </Box>
 

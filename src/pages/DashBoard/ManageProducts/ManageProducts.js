@@ -2,15 +2,15 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { Button, Container, Typography } from '@mui/material';
-import CarSummery from '../CarSummery/CarSummery';
 import { Link } from 'react-router-dom';
 import useData from '../../../hooks/useData';
+import ManageProductsSummery from '../ManageProductsSummery/ManageProductsSummery';
 
 
-const Cars = () => {
+const ManageProducts = () => {
     const [cars] = useData();
     return (
-        <Box sx={{ flexGrow: 1, my:5 }}>
+        <Box sx={{ flexGrow: 1, my:5}}>
             <Typography sx={{ fontWeight: 600, m: 5, textAlign: 'center' }} style={{color: '#1976d2'}} variant="h4" component="div">
                 FEATURED CAR
             </Typography>
@@ -22,19 +22,19 @@ const Cars = () => {
                     :
                     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mb : 3 }}>
                         {
-                            cars?.slice(0, 6).map(car => <CarSummery car={car} key={car.key}></CarSummery>)
+                            cars?.slice(0, 6).map(car => <ManageProductsSummery car={car} key={car.key}></ManageProductsSummery>)
                         }
                     </Grid>
                 }
             </Container>
 
             <Box sx={{ textAlign: 'center' }}>
-                <Link to="/cars" >
-                    <Button variant="contained" sx={{ width: 300 }}>View ALL Car</Button>
+                <Link to="/home" >
+                    <Button variant="contained" sx={{ width: 300 }}>Back Home</Button>
                 </Link>
             </Box>
         </Box>
     );
 };
 
-export default Cars;
+export default ManageProducts;

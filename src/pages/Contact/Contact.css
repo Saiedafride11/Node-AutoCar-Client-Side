@@ -1,0 +1,19 @@
+.contact-us{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #1976d2;
+    border-radius: 5px;
+}
+
+@media only screen and (min-width: 280px) and (max-width:492px) {
+    .contact-us{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 280px) and (max-width:767px) {
+    .contact button{
+        width:75% !important;
+    }
+}

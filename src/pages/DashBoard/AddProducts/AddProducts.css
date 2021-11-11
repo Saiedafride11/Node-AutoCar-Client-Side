@@ -1,0 +1,29 @@
+.add-products{
+    width: 100%;
+}
+.add-products input{
+    width: 75%;
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #1976d2;
+    padding:6px 8px;
+    font-size:14px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.add-products input:hover, .add-products input:active{
+    border: 1px solid #1976d2;
+    transition: 1s;
+}
+
+.add-products::placeholder {
+    color: #a5a5a5;
+  }
+/* .swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid #ff7f47 !important;
+}
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #ff7f47 !important;
+} */

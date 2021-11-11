@@ -1,0 +1,43 @@
+.confirm-order input, .confirm-order select, .confirm-order textarea{
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #1976d2;
+    padding:8px 10px;
+    font-size:14px;
+    outline: none;
+    width: 95%;
+    margin: 8.7px 2.5%
+}
+.confirm-order input:active, .confirm-order select:active, .confirm-order textarea:active{
+    border: 1px solid #1976d2;
+}
+.confirm-order input:hover, .confirm-order select:hover, .confirm-order textarea:hover{
+    border: 1px solid #1976d2;
+    transition: 1s;
+}
+.confirm-order ::placeholder {
+    color: #a5a5a5 ;
+  }
+
+/* .swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid #1976d2 !important;
+}
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #1976d2 !important;
+} */
+
+  @media only screen and (min-width: 280px) and (max-width:992px) {
+    .order-extra{
+        padding-bottom: 35px;
+      }
+    .confirm-order {
+        border-top: 1px solid #a5a5a5;
+    }
+    .confirm-order form{
+        margin-top: 35px;
+    }
+    .confirm-order form input, .confirm-order form select, .confirm-order form textarea{
+        width: 100% !important;
+    }
+}

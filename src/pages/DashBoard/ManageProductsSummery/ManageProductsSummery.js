@@ -8,14 +8,13 @@ import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
-import { useHistory } from 'react-router';
 
-const AllCarsSummery = (props) => {
+const ManageProductsSummery = (props) => {
     const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, key} = props.car;
-    const history = useHistory()
 
-    const handlePurchase = () => {
-        history.push(`/car/${key}`)
+
+    const handleDeleteProducts = () => {
+        
     }
     return (
         <Grid item xs={4} sm={4} md={4} className="img-scale-main">
@@ -58,11 +57,11 @@ const AllCarsSummery = (props) => {
                     </Typography>
                 </Box>
 
-                <Button onClick={handlePurchase} variant="contained" sx={{ width: 1 }}>Purchase Now</Button>
+                <Button onClick={handleDeleteProducts} variant="contained" sx={{ width: 1 }}>Delete Products</Button>
             </CardContent>
          </Card>
         </Grid>
     );
 };
 
-export default AllCarsSummery;
+export default ManageProductsSummery;
