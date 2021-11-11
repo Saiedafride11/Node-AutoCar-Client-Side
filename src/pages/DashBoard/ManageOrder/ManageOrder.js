@@ -1,4 +1,5 @@
 import React from 'react';
+import './ManageOrder.css';
 import useOrder from '../../../hooks/useOrder';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -15,6 +16,50 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 const ManageOrder = () => {
     const [orders, setOrders] = useOrder()
 
+    // Delete
+    const handleDeleteOrder = id => {
+        const proceed = window.confirm('Are you sure, you want to delete?')
+        if(proceed){
+            const url = `http://localhost:5000/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then( data => {
+                if(data.deletedCount > 0){
+                    alert('Deleted Successfully');
+                    const remaining = orders?.filter(order => order._id !== id);
+                    setOrders(remaining)
+                }
+            })
+            }
+    }
+
+    // Update 
+    const updateInfo = {
+        status: 'Approve',
+    }
+    const handleUpdateStatus = id => {
+        const url = `http://localhost:5000/orders/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updateInfo)
+        })
+        .then(res => res.json())
+        .then(data => {
+            if(data.modifiedCount > 0){
+                const remaining = orders?.filter(order => order._id === id)[0];
+                remaining.status = "Approve";
+                setOrders([...orders]);
+                alert('Updated successfully')
+            }
+        })
+    }
+
+
     return (
         <Container>
             <TableContainer component={Paper}>
@@ -23,7 +68,7 @@ const ManageOrder = () => {
                         <h2 style={{ color: '#1976d2', margin: '50px 0', textAlign: 'center'}}>No Show Any Order</h2>
                     :
                     <Table sx={{ minWidth: 650 }} aria-label="caption table">
-                        <TableHead style={{backgroundColor: '#1976d2', color: '#fff'}}>
+                        <TableHead style={{backgroundColor: '#1976d2'}}>
                             <TableRow>
                                 <TableCell align="left">SL. NO.</TableCell>
                                 <TableCell align="left">Name</TableCell>
@@ -50,10 +95,10 @@ const ManageOrder = () => {
                                 <TableCell align="left">{order.date}</TableCell>
                                 <TableCell align="left" style={{ color: order.status === "Pending" ? '#dc3545' : '#1976d2' }}>{order.status}</TableCell>
                                 <TableCell align="left">
-                                    <Button variant="contained">Approve</Button>
+                                    <Button onClick={() => handleUpdateStatus(order._id)} variant="contained">Approve</Button>
                                 </TableCell>
                                 <TableCell align="left">
-                                    <Button variant="contained"><FontAwesomeIcon icon={faTrashAlt} /></Button>
+                                    <Button onClick={() => handleDeleteOrder(order._id)} variant="contained"><FontAwesomeIcon icon={faTrashAlt} /></Button>
                                 </TableCell>
                                 </TableRow>
                             ))
