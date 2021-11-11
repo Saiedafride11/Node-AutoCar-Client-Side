@@ -10,7 +10,7 @@ import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import Contact from './pages/Contact/Contact';
 import About from './pages/About/About';
 import MyOrder from './pages/DashBoard/MyOrder/MyOrder';
-import Review from './pages/Home/Review/Review';
+import Review from './pages/DashBoard/Review/Review';
 import Pay from './pages/DashBoard/Pay/Pay';
 import Header from './pages/Shared/Header/Header';
 import Footer from './pages/Shared/Footer/Footer';
@@ -18,6 +18,7 @@ import AddProducts from './pages/DashBoard/AddProducts/AddProducts';
 import ManageOrder from './pages/DashBoard/ManageOrder/ManageOrder';
 import MakeAdmin from './pages/DashBoard/MakeAdmin/MakeAdmin';
 import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
+import AllClientReview from './pages/Home/AllClientReview/AllClientReview';
 
 function App() {
   return (
@@ -70,6 +71,9 @@ function App() {
                     </Route>
                     <Route path="/makeadmin">
                         <MakeAdmin></MakeAdmin>
+                    </Route>
+                    <Route path="/reviews">
+                        <AllClientReview></AllClientReview>
                     </Route>
                     <Route path="/login">
                         <Login></Login>

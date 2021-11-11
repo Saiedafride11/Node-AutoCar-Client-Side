@@ -69,9 +69,6 @@ export default function PrimarySearchAppBar() {
         <MenuItem onClick={handleMenuClose}>
             <Link to="/review" style={{color: '#1976d2'}}>Review</Link>
         </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Button onClick={logOut} variant="contained">LogOut</Button>
-        </MenuItem>
 
         <MenuItem onClick={handleMenuClose}>
             <Link to="/manageorder" style={{color: '#1976d2'}}>Manage ALL Orders</Link>
@@ -85,6 +82,8 @@ export default function PrimarySearchAppBar() {
         <MenuItem onClick={handleMenuClose}>
             <Link to="/makeadmin" style={{color: '#1976d2'}}>Make Admin</Link>
         </MenuItem>
+
+        
         <MenuItem onClick={handleMenuClose}>
             <Button onClick={logOut} variant="contained">LogOut</Button>
         </MenuItem>

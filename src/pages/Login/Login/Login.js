@@ -22,7 +22,7 @@ const Login = () => {
             <div className="container py-5">
                 <div className="text-center">
                     <h3 className="pb-3" style={{color: '#1976d2'}}>Please Login</h3>
-                    <button onClick={handleGoogleLogin} className="btn w-25" style={{color: '#1976d2', border: '2px solid #ff7f47'}}> 
+                    <button onClick={handleGoogleLogin} className="btn w-25" style={{color: '#1976d2', border: '2px solid #1976d2'}}> 
                         <img src="https://i.ibb.co/qN9z9Fy/google-logo.png" alt="" className="w-25" /> Log in with Google
                     </button>
                 </div>
