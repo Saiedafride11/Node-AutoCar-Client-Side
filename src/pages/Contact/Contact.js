@@ -9,19 +9,19 @@ const Contact = () => {
                     <h2 className="text-center py-1" style={{color: '#1976d2'}}>Contact Us</h2>
                     <form className="row g-3 p-5">
                         <div className="col-md-6">
-                            <label htmlFor="fName" className="form-label">First Name</label>
+                            <label htmlFor="fName" className="form-label" style={{color :'#1976d2'}}>First Name</label>
                             <input type="text" placeholder="First Name..." className="form-control" id="fName"/>
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="lName" className="form-label">Last Name</label>
+                            <label htmlFor="lName" className="form-label" style={{color :'#1976d2'}}>Last Name</label>
                             <input type="text" placeholder="Last Name..." className="form-control" id="lName"/>
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="email" className="form-label">Email</label>
+                            <label htmlFor="email" className="form-label" style={{color :'#1976d2'}}>Email</label>
                             <input type="email" placeholder="Email..." className="form-control" id="email"/>
                         </div>
                         <div className="col-md-6">
-                            <label htmlFor="phone" className="form-label">Phone</label>
+                            <label htmlFor="phone" className="form-label" style={{color :'#1976d2'}}>Phone</label>
                             <input type="text" placeholder="Phone..." className="form-control" id="phone"/>
                         </div>
                         <div className="col-12">

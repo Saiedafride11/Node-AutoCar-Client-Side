@@ -9,8 +9,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
-        data.status = "Pending"
-        fetch('http://localhost:5000/orders', {
+        fetch('https://polar-dusk-34230.herokuapp.com/review', {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -18,7 +17,7 @@ const Review = () => {
         .then(res => res.json())
         .then(result => {
             if(result.insertedId){
-                alert('succesfull')
+                alert('Succesfully Submitted Your Review')
                 reset();
             }
         })

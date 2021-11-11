@@ -7,7 +7,7 @@ const AddProducts = () => {
     document.title = 'Add Service';
 
     const onSubmit = data => {
-        fetch('http://localhost:5000/cars', {
+        fetch('https://polar-dusk-34230.herokuapp.com/cars', {
             method: 'POST',
             headers: { 'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -22,7 +22,7 @@ const AddProducts = () => {
     };
     return (
         <div className="container py-5">
-            <h2 className="py-3 text-center" style={{color: '#1976d2'}}>Add New Products</h2>
+            <h2 className="py-3 text-center" style={{color: '#1976d2'}}>Add New Cars</h2>
             <div className="add-products">
                 <form onSubmit={handleSubmit(onSubmit)} className="text-center">
                     <input placeholder="Please Type Title" {...register("title")} required/>

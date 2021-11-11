@@ -1,5 +1,5 @@
 import React from 'react';
-import './ClientReviewSummery.css';
+import './AllClientReviewSummery.css';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -7,7 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Rating } from '@mui/material';
 
-const ClientReviewSummery = (props) => {
+const AllClientReviewSummery = (props) => {
     const {review, img, name, profession, star} = props.review;
 
     return (
@@ -18,7 +18,7 @@ const ClientReviewSummery = (props) => {
                 style={{width: '50%', height: '50%', margin: '0 auto'}}
                 image={img}
                 alt="Paella dish"
-                className="ClientReviewSummery mt-4"
+                className="AllClientReviewSummery mt-4"
              />
             <CardContent sx={{ textAlign: 'center' }}>
                 <Typography variant="body2"  color="text.secondary" style={{color: '#6c757d'}}>
@@ -39,4 +39,4 @@ const ClientReviewSummery = (props) => {
     );
 };
 
-export default ClientReviewSummery;
+export default AllClientReviewSummery;

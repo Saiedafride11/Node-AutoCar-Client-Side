@@ -7,31 +7,11 @@ import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
-import useData from '../../../hooks/useData';
+import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons';
 
 const ManageProductsSummery = (props) => {
     const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _id} = props.car;
-    const [cars, setCars] = useData();
 
-    // Delete
-    const handleDeleteProducts = id => {
-        const proceed = window.confirm('Are you sure, you want to delete?')
-        if(proceed){
-            const url = `http://localhost:5000/cars/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-            .then(res => res.json())
-            .then( data => {
-                if(data.deletedCount > 0){
-                    alert('Deleted Successfully');
-                    const remaining = cars?.filter(car => car._id !== id);
-                    setCars(remaining)
-                }
-            })
-            }
-    }
     return (
         <Grid item xs={4} sm={4} md={4} className="img-scale-main">
          <Card sx={{ minWidth: 275, border: 0, boxShadow: 3}} className="img-scale">
@@ -73,7 +53,7 @@ const ManageProductsSummery = (props) => {
                     </Typography>
                 </Box>
 
-                <Button onClick={() => handleDeleteProducts(_id)} variant="contained" sx={{ width: 1 }}>Delete Products</Button>
+                <Button onClick={() => props.handleDeleteProducts(_id)} variant="contained" sx={{ width: 1 }}>Delete Products</Button>
             </CardContent>
          </Card>
         </Grid>

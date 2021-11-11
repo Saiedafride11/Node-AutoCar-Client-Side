@@ -4,7 +4,25 @@
     background-color: #1976d2;
     border-radius: 5px;
 }
+.contact input, .contact textarea{
+    border: 1px solid #1976d2;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #1976d2;
+    padding:6px 8px;
+    font-size:14px;
+    outline: none;
+    margin-bottom: 15px;
+}
 
+.contact input:hover, .contact input:active{
+    border: 1px solid #1976d2;
+    transition: 1s;
+}
+
+.contact::placeholder {
+    color: #a5a5a5;
+  }
 @media only screen and (min-width: 280px) and (max-width:492px) {
     .contact-us{
         display: grid;
