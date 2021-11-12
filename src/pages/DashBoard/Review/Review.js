@@ -7,6 +7,8 @@ import useAuth from '../../../hooks/useAuth';
 const Review = () => {
     const {user} = useAuth();
     const { register, handleSubmit, reset } = useForm();
+    
+    document.title = "Add Review";
 
     const onSubmit = data => {
         fetch('https://polar-dusk-34230.herokuapp.com/review', {

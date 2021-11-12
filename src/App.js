@@ -20,6 +20,8 @@ import MakeAdmin from './pages/DashBoard/MakeAdmin/MakeAdmin';
 import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
 import AllClientReview from './pages/Home/AllClientReview/AllClientReview';
 import Register from './pages/Login/Register/Register';
+import AdminRoute from './pages/Login/AdminRoute/AdminRoute';
+import UserRoute from './pages/Login/UserRoute/UserRoute';
 
 function App() {
   return (
@@ -46,27 +48,27 @@ function App() {
                     <Route path="/about">
                         <About></About>
                     </Route>
-                    <Route path="/payment">
+                    <UserRoute path="/payment">
                         <Pay></Pay>
-                    </Route>
-                    <Route path="/order">
+                    </UserRoute>
+                    <UserRoute path="/order">
                         <MyOrder></MyOrder>
-                    </Route>
-                    <Route path="/review">
+                    </UserRoute>
+                    <UserRoute path="/review">
                         <Review></Review>
-                    </Route>
-                    <Route path="/manageorder">
+                    </UserRoute>
+                    <AdminRoute path="/manageorder">
                         <ManageOrder></ManageOrder>
-                    </Route>
-                    <Route path="/manageproducts">
+                    </AdminRoute>
+                    <AdminRoute path="/manageproducts">
                         <ManageProducts></ManageProducts>
-                    </Route>
-                    <Route path="/addproducts">
+                    </AdminRoute>
+                    <AdminRoute path="/addproducts">
                         <AddProducts></AddProducts>
-                    </Route>
-                    <Route path="/makeadmin">
+                    </AdminRoute>
+                    <AdminRoute path="/makeadmin">
                         <MakeAdmin></MakeAdmin>
-                    </Route>
+                    </AdminRoute>
                     <Route path="/reviews">
                         <AllClientReview></AllClientReview>
                     </Route>

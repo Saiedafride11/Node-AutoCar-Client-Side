@@ -15,7 +15,8 @@ import { Button } from '@mui/material';
 
 
 export default function PrimarySearchAppBar() {
-    const {user, logOut} = useAuth()
+    const {user, admin, logOut} = useAuth();
+
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
   
@@ -57,31 +58,38 @@ export default function PrimarySearchAppBar() {
         onClose={handleMenuClose}
       >
         <MenuItem onClick={handleMenuClose}>
-            <img src={user?.photoURL} className="w-50 rounded-circle mx-auto" alt="" />
+            <img src={user?.photoURL} className="w-50 rounded-circle mx-auto" alt="img" />
         </MenuItem>
+        <p style={{textTransform: 'capitalize', textAlign: 'center', marginTop: '15px'}}>{user?.displayName}</p>
 
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
-        </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/order" style={{color: '#1976d2'}}>My Orders</Link>
-        </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/review" style={{color: '#1976d2'}}>Review</Link>
-        </MenuItem>
+        {  !admin && <Box>
+          <MenuItem onClick={handleMenuClose}>
+              <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+              <Link to="/order" style={{color: '#1976d2'}}>My Orders</Link>
+          </MenuItem>
+          <MenuItem onClick={handleMenuClose}>
+              <Link to="/review" style={{color: '#1976d2'}}>Review</Link>
+          </MenuItem>
+          </Box>
+        }
 
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/manageorder" style={{color: '#1976d2'}}>Manage ALL Orders</Link>
-        </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/manageproducts" style={{color: '#1976d2'}}>Manage Products</Link>
-        </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/addproducts" style={{color: '#1976d2'}}>Add Products</Link>
-        </MenuItem>
-        <MenuItem onClick={handleMenuClose}>
-            <Link to="/makeadmin" style={{color: '#1976d2'}}>Make Admin</Link>
-        </MenuItem>
+        {  admin && <Box>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/manageorder" style={{color: '#1976d2'}}>Manage ALL Orders</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/manageproducts" style={{color: '#1976d2'}}>Manage Products</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/addproducts" style={{color: '#1976d2'}}>Add Products</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/makeadmin" style={{color: '#1976d2'}}>Make Admin</Link>
+            </MenuItem>
+            </Box>
+        }
 
         
         <MenuItem onClick={handleMenuClose}>

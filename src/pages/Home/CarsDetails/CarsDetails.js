@@ -10,6 +10,8 @@ const CarsDetails = () => {
     const [cars] = useData();
     const [carts, setCart] = useState();
 
+    document.title = "Car Order";
+
     useEffect(() => {
         const car = cars?.filter((car) => car._id === carId);
         setCart(car);

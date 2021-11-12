@@ -15,7 +15,8 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 const ManageOrder = () => {
     const [orders, setOrders] = useOrder()
-
+    
+    document.title = "Manage Order";
     // Delete
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')

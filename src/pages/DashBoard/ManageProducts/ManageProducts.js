@@ -10,6 +10,8 @@ import ManageProductsSummery from '../ManageProductsSummery/ManageProductsSummer
 const ManageProducts = () => {
     const [cars, setCars] = useData();
 
+    document.title = "Manage Products";
+
      // Delete
      const handleDeleteProducts = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')

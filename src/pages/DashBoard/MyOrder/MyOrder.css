@@ -1,5 +1,5 @@
 .my-order{
     min-height:100vh;
-    display: flex;
-    align-items: center;
+    display: flex !important;
+    align-items: center !important;
 }

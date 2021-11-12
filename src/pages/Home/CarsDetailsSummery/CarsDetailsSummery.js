@@ -83,15 +83,15 @@ const CarsDetailsSummery = (props) => {
                         <input defaultValue={user?.displayName} {...register("name")} style={{textTransform: "capitalize"}}required/>
                         <input defaultValue={user?.email} {...register("email")} readOnly/>
                         <input placeholder="Please Type Your Number....." {...register("phone")} type="number" required/>
-                        <select defaultValue="Tickets Type" {...register("type", { required: true, maxLength: 20 })}>
+                        <select defaultValue="Type" {...register("type", { required: true, maxLength: 20 })}>
                             <option value="type">Please Select Types.....</option>
-                            <option value="bus">SPORTS CAR</option>
-                            <option value="ship">COUPE</option>
-                            <option value="plane">SEDAN</option>
-                            <option value="plane">STATION WAGON</option>
-                            <option value="plane">HATCHBACK</option>
-                            <option value="plane">CONVERTIBLE</option>
-                            <option value="plane">MINIVAN</option>
+                            <option value="SPORTS CAR">SPORTS CAR</option>
+                            <option value="COUPE">COUPE</option>
+                            <option value="SEDAN">SEDAN</option>
+                            <option value="STATION WAGON">STATION WAGON</option>
+                            <option value="HATCHBACK">HATCHBACK</option>
+                            <option value="CONVERTIBLE">CONVERTIBLE</option>
+                            <option value="MINIVAN">MINIVAN</option>
                         </select>
                         <input defaultValue="Date" type="date" {...register("date")} />
                         <textarea {...register("description")} placeholder="Please Type Your Message....." style={{height: '80px'}} required/>

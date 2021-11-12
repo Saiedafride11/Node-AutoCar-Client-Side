@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 
 const AddProducts = () => {
     const { register, handleSubmit, reset } = useForm();
-    document.title = 'Add Service';
+    document.title = 'Add Cars';
 
     const onSubmit = data => {
         fetch('https://polar-dusk-34230.herokuapp.com/cars', {

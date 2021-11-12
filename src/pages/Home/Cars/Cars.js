@@ -9,6 +9,7 @@ import useData from '../../../hooks/useData';
 
 const Cars = () => {
     const [cars] = useData();
+
     return (
         <Box sx={{ flexGrow: 1, my:5 }}>
             <Typography sx={{ fontWeight: 600, m: 5, textAlign: 'center' }} style={{color: '#1976d2'}} variant="h4" component="div">

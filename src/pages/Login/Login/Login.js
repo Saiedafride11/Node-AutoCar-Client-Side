@@ -58,6 +58,7 @@ const Login = () => {
                             to="/register">
                             <Button variant="text">New User? Please Register</Button>
                         </NavLink>
+                        <br/>
                         {isLoading && <CircularProgress/>}
                         {user?.email && <Alert severity="success">Login successfully!</Alert>}
                         {authError && <Alert severity="error">{authError}</Alert>}
