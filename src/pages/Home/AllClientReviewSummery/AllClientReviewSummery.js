@@ -22,7 +22,7 @@ const AllClientReviewSummery = (props) => {
              />
             <CardContent sx={{ textAlign: 'center' }}>
                 <Typography variant="body2"  color="text.secondary" style={{color: '#6c757d'}}>
-                    {review}
+                    {review.slice(0, 120)}
                 </Typography>
                 <Typography variant="body2"  color="text.secondary" style={{color: '#ffb400'}}>
                     <Rating name="read-only" value={star} readOnly />

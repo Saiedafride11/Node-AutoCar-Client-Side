@@ -10,3 +10,16 @@
     transition: 1s;
     z-index: -555;
 }
+.offer span{
+    position: relative;
+	margin-right: 30px;
+}
+.offer span::before{
+    content: "";
+	position: absolute;
+	width: 60px;
+	height: 2px;
+	background-color: #1976d2;
+	top: 10px;
+	left: -1px;
+}

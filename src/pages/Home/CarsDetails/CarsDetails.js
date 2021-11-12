@@ -15,7 +15,7 @@ const CarsDetails = () => {
     useEffect(() => {
         const car = cars?.filter((car) => car._id === carId);
         setCart(car);
-      }, [cars]);
+      }, [cars, carId]);
 
     return (
         <Box sx={{ flexGrow: 1, my:5 }}>

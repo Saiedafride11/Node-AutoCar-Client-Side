@@ -22,6 +22,7 @@ import AllClientReview from './pages/Home/AllClientReview/AllClientReview';
 import Register from './pages/Login/Register/Register';
 import AdminRoute from './pages/Login/AdminRoute/AdminRoute';
 import UserRoute from './pages/Login/UserRoute/UserRoute';
+import ReceivedMessage from './pages/DashBoard/ReceivedMessage/ReceivedMessage';
 
 function App() {
   return (
@@ -68,6 +69,9 @@ function App() {
                     </AdminRoute>
                     <AdminRoute path="/makeadmin">
                         <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path="/message">
+                        <ReceivedMessage></ReceivedMessage>
                     </AdminRoute>
                     <Route path="/reviews">
                         <AllClientReview></AllClientReview>

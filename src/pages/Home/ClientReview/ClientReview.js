@@ -6,7 +6,7 @@ import useReview from '../../../hooks/useReview';
 import ClientReviewSummery from '../ClientReviewSummery/ClientReviewSummery';
 
 const ClientReview = () => {
-    const [reviews, setReviews] = useReview();
+    const [reviews] = useReview();
     return (
         <Box sx={{ flexGrow: 1, my:5 }}>
         <Typography sx={{ fontWeight: 600, my: 5, textAlign: 'center' }} style={{color: '#1976d2'}} variant="h4" component="div">

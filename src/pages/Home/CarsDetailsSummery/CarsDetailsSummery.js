@@ -6,14 +6,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import './CarsDetailsSummery.css';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 
 const CarsDetailsSummery = (props) => {
     const {user} = useAuth();
-    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _id} = props.car;
+    const {title, petrol, km, manual, type, color, publish, ratting, price, offer, img} = props.car;
     const { register, handleSubmit, reset } = useForm();
 
     const onSubmit = data => {
@@ -45,6 +45,15 @@ const CarsDetailsSummery = (props) => {
                     <Typography variant="h6" gutterBottom component="div" style={{color: '#1976d2'}}>
                         {title}
                     </Typography>
+
+                    <Box sx={{ display: 'flex', my : 2 }}>
+                        <Typography variant="h6" gutterBottom component="div" sx={{ mr: 3 }}>
+                            <FontAwesomeIcon icon={faMoneyBill} style={{color: '#1976d2'}}/> <strong>{price}</strong>
+                        </Typography>
+                        <Typography variant="h6" gutterBottom component="div" sx={{ mr: 3 }} className="offer">
+                            <FontAwesomeIcon icon={faMoneyBill} style={{color: '#1976d2'}}/> <strong><span>{offer}</span></strong>
+                        </Typography>
+                    </Box>
 
                     <Box sx={{ display: 'flex', my : 2 }}>
                         <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>

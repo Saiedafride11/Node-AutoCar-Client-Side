@@ -1,40 +1,44 @@
+import { Box } from '@mui/system';
 import React from 'react';
+import { useForm } from "react-hook-form";
+import useAuth from '../../hooks/useAuth';
 import './Contact.css';
 
 const Contact = () => {
+    const {user} = useAuth();
+    const { register, handleSubmit, reset } = useForm();
+
     document.title = 'Contact Us';
+
+    const onSubmit = data => {
+        fetch('https://polar-dusk-34230.herokuapp.com/message', {
+            method: 'POST',
+            headers: { 'content-type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(res => res.json())
+        .then(result => {
+            if(result.insertedId){
+                alert('Successfully Send Your Message')
+                reset();
+            }
+        })
+    };
     return (
             <div className="contact py-5">
                 <div className="container">
                     <h2 className="text-center py-1" style={{color: '#1976d2'}}>Contact Us</h2>
-                    <form className="row g-3 p-5">
-                        <div className="col-md-6">
-                            <label htmlFor="fName" className="form-label" style={{color :'#1976d2'}}>First Name</label>
-                            <input type="text" placeholder="First Name..." className="form-control" id="fName"/>
-                        </div>
-                        <div className="col-md-6">
-                            <label htmlFor="lName" className="form-label" style={{color :'#1976d2'}}>Last Name</label>
-                            <input type="text" placeholder="Last Name..." className="form-control" id="lName"/>
-                        </div>
-                        <div className="col-md-6">
-                            <label htmlFor="email" className="form-label" style={{color :'#1976d2'}}>Email</label>
-                            <input type="email" placeholder="Email..." className="form-control" id="email"/>
-                        </div>
-                        <div className="col-md-6">
-                            <label htmlFor="phone" className="form-label" style={{color :'#1976d2'}}>Phone</label>
-                            <input type="text" placeholder="Phone..." className="form-control" id="phone"/>
-                        </div>
-                        <div className="col-12">
-                            <textarea className="w-100 p-2" style={{height:'100px'}} placeholder="Message...">
+                    <Box className="confirm-message text-center">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input defaultValue={user?.displayName} {...register("name")} style={{textTransform: "capitalize"}} required/>
+                            <input defaultValue={user?.email} {...register("email")} required/>
+                            <input placeholder="Please Type Your Number....." {...register("phone")} type="number" required/>
+                            <textarea {...register("message")} placeholder="Please Type Your Message....." style={{height: '120px'}} required/>
+                            <input type="submit" className="btn text-white w-50"  style={{backgroundColor: '#1976d2'}}/>
+                        </form>
+                    </Box>
 
-                            </textarea>
-                        </div>
-                        <div className="col-12">
-                            <button type="submit" className="btn w-25 text-white"  style={{backgroundColor: '#1976d2'}}>Send Message</button>
-                        </div>
-                    </form>
-
-                    <div className="contact-us text-center text-white p-3">
+                    <div className="contact-us text-center text-white p-3 my-5">
                         <div>
                             <h4>Address</h4>
                             <p>H3556 Beech Street, San Francisco, USA</p>

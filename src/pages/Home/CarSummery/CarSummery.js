@@ -7,12 +7,12 @@ import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar, faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 import { useHistory } from 'react-router';
 import './CarSummery.css';
 
 const CarSummery = (props) => {
-    const {title, petrol, km, manual, type, color, publish, ratting, sale, price, offer, img, _id} = props.car;
+    const {title, petrol, km, manual, type, color, publish, ratting, price, offer, img, _id} = props.car;
     const history = useHistory()
 
     const handlePurchase = () => {
@@ -31,6 +31,15 @@ const CarSummery = (props) => {
                 <Typography variant="h6" gutterBottom component="div" style={{color: '#1976d2'}}>
                     {title}
                 </Typography>
+
+                <Box sx={{ display: 'flex', my : 2 }}>
+                    <Typography variant="h6" gutterBottom component="div" sx={{ mr: 3 }}>
+                        <FontAwesomeIcon icon={faMoneyBill} style={{color: '#1976d2'}}/> <strong>{price}</strong>
+                    </Typography>
+                    <Typography variant="h6" gutterBottom component="div" sx={{ mr: 3 }} className="offer">
+                        <FontAwesomeIcon icon={faMoneyBill} style={{color: '#1976d2'}}/> <strong><span>{offer}</span></strong>
+                    </Typography>
+                </Box>
 
                 <Box sx={{ display: 'flex', my : 2 }}>
                     <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>

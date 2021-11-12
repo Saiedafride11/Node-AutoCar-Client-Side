@@ -1,37 +1,48 @@
+
+.confirm-message input, .confirm-message textarea{
+    border: 1px solid #1976d2;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #1976d2;
+    padding:8px 10px;
+    font-size:14px;
+    outline: none;
+    width: 95%;
+    margin: 12px 2.5%
+}
+.confirm-message input:active, .confirm-message textarea:active{
+    border: 1px solid #1976d2;
+}
+.confirm-message input:hover,.confirm-message textarea:hover{
+    border: 1px solid #1976d2;
+    transition: 1s;
+}
+.confirm-message ::placeholder {
+    color: #a5a5a5 ;
+  }
+
+/* .swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid #1976d2 !important;
+}
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #1976d2 !important;
+} */
+
 .contact-us{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     background-color: #1976d2;
     border-radius: 5px;
 }
-.contact input, .contact textarea{
-    border: 1px solid #1976d2;
-    box-sizing: border-box;
-    border-radius: 6px;
-    color: #1976d2;
-    padding:6px 8px;
-    font-size:14px;
-    outline: none;
-    margin-bottom: 15px;
-}
 
-.contact input:hover, .contact input:active{
-    border: 1px solid #1976d2;
-    transition: 1s;
+  @media only screen and (min-width: 280px) and (max-width:992px) {
+    .confirm-message form input, .confirm-message form select, .confirm-message form textarea{
+        width: 95% !important;
+    }
 }
-
-.contact::placeholder {
-    color: #a5a5a5;
-  }
 @media only screen and (min-width: 280px) and (max-width:492px) {
     .contact-us{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media only screen and (min-width: 280px) and (max-width:767px) {
-    .contact button{
-        width:75% !important;
     }
 }

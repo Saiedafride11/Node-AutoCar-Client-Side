@@ -63,31 +63,34 @@ export default function PrimarySearchAppBar() {
         <p style={{textTransform: 'capitalize', textAlign: 'center', marginTop: '15px'}}>{user?.displayName}</p>
 
         {  !admin && <Box>
-          <MenuItem onClick={handleMenuClose}>
-              <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose}>
-              <Link to="/order" style={{color: '#1976d2'}}>My Orders</Link>
-          </MenuItem>
-          <MenuItem onClick={handleMenuClose}>
-              <Link to="/review" style={{color: '#1976d2'}}>Review</Link>
-          </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/order" style={{color: '#1976d2'}}>My Orders</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/review" style={{color: '#1976d2'}}>Review</Link>
+            </MenuItem>
           </Box>
         }
 
         {  admin && <Box>
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/manageorder" style={{color: '#1976d2'}}>Manage ALL Orders</Link>
-            </MenuItem>
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/manageproducts" style={{color: '#1976d2'}}>Manage Products</Link>
-            </MenuItem>
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/addproducts" style={{color: '#1976d2'}}>Add Products</Link>
-            </MenuItem>
-            <MenuItem onClick={handleMenuClose}>
-                <Link to="/makeadmin" style={{color: '#1976d2'}}>Make Admin</Link>
-            </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                  <Link to="/manageorder" style={{color: '#1976d2'}}>Manage ALL Orders</Link>
+              </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                  <Link to="/manageproducts" style={{color: '#1976d2'}}>Manage Products</Link>
+              </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                  <Link to="/addproducts" style={{color: '#1976d2'}}>Add Products</Link>
+              </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                  <Link to="/makeadmin" style={{color: '#1976d2'}}>Make Admin</Link>
+              </MenuItem>
+              <MenuItem onClick={handleMenuClose}>
+                  <Link to="/message" style={{color: '#1976d2'}}>Received Message</Link>
+              </MenuItem>
             </Box>
         }
 

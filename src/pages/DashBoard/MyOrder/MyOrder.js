@@ -23,7 +23,7 @@ const MyOrder = () => {
     useEffect(() => {
         const car = orders?.filter(order => order.email === user.email);
         setMyOrders(car)
-      }, [orders]);
+      }, [orders, user.email]);
 
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')

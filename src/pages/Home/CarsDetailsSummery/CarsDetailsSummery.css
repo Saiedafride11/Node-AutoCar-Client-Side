@@ -7,7 +7,7 @@
     font-size:14px;
     outline: none;
     width: 95%;
-    margin: 8.7px 2.5%
+    margin: 12px 2.5%
 }
 .confirm-order input:active, .confirm-order select:active, .confirm-order textarea:active{
     border: 1px solid #1976d2;
