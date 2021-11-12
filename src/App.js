@@ -19,6 +19,7 @@ import ManageOrder from './pages/DashBoard/ManageOrder/ManageOrder';
 import MakeAdmin from './pages/DashBoard/MakeAdmin/MakeAdmin';
 import ManageProducts from './pages/DashBoard/ManageProducts/ManageProducts';
 import AllClientReview from './pages/Home/AllClientReview/AllClientReview';
+import Register from './pages/Login/Register/Register';
 
 function App() {
   return (
@@ -68,6 +69,9 @@ function App() {
                     </Route>
                     <Route path="/reviews">
                         <AllClientReview></AllClientReview>
+                    </Route>
+                    <Route path="/register">
+                        <Register></Register>
                     </Route>
                     <Route path="/login">
                         <Login></Login>

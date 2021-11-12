@@ -1,10 +1,11 @@
 import React from 'react';
+import './NotFound.css';
 
 const NotFound = () => {
     document.title = '404 Error';
     return (
-        <div className="container">
-            <div className="d-flex justify-content-center align-items-center">
+        <div className="container not-found">
+            <div className="d-flex justify-content-center align-items-center mx-auto">
                 <div>
                     <h1 className="mx-4">404</h1>
                 </div>

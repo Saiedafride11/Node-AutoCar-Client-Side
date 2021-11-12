@@ -1,5 +1,7 @@
-.not-found{
+.make-admin{
     min-height:100vh;
     display: flex;
     align-items: center;
+    margin: 0 auto;
+    text-align: center;
 }

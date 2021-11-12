@@ -11,6 +11,7 @@ import { Button, Container } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../../hooks/useAuth';
+import './MyOrder.css';
 
 
 const MyOrder = () => {
@@ -44,7 +45,7 @@ const MyOrder = () => {
 
 
     return (
-        <Container>
+        <Container className="my-order">
             <TableContainer component={Paper}>
                 {
                     myOrders?.length === 0 ?
