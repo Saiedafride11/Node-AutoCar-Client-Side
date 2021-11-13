@@ -1,9 +1,14 @@
 .css-1ygcj2i-MuiTableCell-root {
     color: #fff !important;
 }
-
 .manage-order{
     min-height:100vh;
     display: flex !important;
     align-items: center !important;
+}
+.swal2-icon.swal2-success .swal2-success-ring {
+    border: 0.25em solid #1976d2 !important;
+}
+.swal2-icon.swal2-success [class^=swal2-success-line] {
+    background-color: #1976d2 !important;
 }

@@ -5,6 +5,7 @@ import { Button, Container, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import useData from '../../../hooks/useData';
 import ManageProductsSummery from '../ManageProductsSummery/ManageProductsSummery';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 
 const ManageProducts = () => {
@@ -23,7 +24,13 @@ const ManageProducts = () => {
             .then(res => res.json())
             .then( data => {
                 if(data.deletedCount > 0){
-                    alert('Deleted Successfully');
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Product Deleted Successfully',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
                     const remaining = cars?.filter(car => car._id !== id);
                     setCars(remaining)
                 }

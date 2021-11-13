@@ -10,6 +10,7 @@ import Paper from '@mui/material/Paper';
 import { Button, Container } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 
 const ReceivedMessage = () => {
@@ -34,7 +35,13 @@ const ReceivedMessage = () => {
             .then(res => res.json())
             .then( data => {
                 if(data.deletedCount > 0){
-                    alert('Deleted Successfully');
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Message Deleted Successfully',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
                     const remaining = messages?.filter(message => message._id !== id);
                     setMessages(remaining)
                 }

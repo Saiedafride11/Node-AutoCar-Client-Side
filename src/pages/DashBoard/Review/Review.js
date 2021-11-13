@@ -3,6 +3,7 @@ import { Box } from '@mui/system';
 import './Review.css';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 const Review = () => {
     const {user} = useAuth();
@@ -19,7 +20,13 @@ const Review = () => {
         .then(res => res.json())
         .then(result => {
             if(result.insertedId){
-                alert('Succesfully Submitted Your Review')
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Succesfully Submitted Your Review',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 reset();
             }
         })

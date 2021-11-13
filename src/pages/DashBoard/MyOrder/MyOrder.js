@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../../hooks/useAuth';
 import './MyOrder.css';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 
 const MyOrder = () => {
@@ -36,7 +37,13 @@ const MyOrder = () => {
             .then(res => res.json())
             .then( data => {
                 if(data.deletedCount > 0){
-                    alert('Deleted Successfully');
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Order Deleted Successfully',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
                     const remaining = orders.filter(order => order._id !== id);
                     setOrders(remaining)
                 }

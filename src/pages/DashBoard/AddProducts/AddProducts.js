@@ -1,6 +1,7 @@
 import React from 'react';
 import './AddProducts.css';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 const AddProducts = () => {
     const { register, handleSubmit, reset } = useForm();
@@ -15,7 +16,13 @@ const AddProducts = () => {
         .then(res => res.json())
         .then(result => {
             if(result.insertedId){
-                alert('Added successfully')
+                Swal.fire({
+                    position: 'center',
+                    icon: 'success',
+                    title: 'Product Added Successfully',
+                    showConfirmButton: false,
+                    timer: 2000
+                })
                 reset();
             }
         })
