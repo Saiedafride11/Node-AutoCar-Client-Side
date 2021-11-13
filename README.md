@@ -1,8 +1,10 @@
 ﻿<h1><strong>AutoCar</strong></h1>
 
-<a target="_blank" href=" https://node-autocar-firebase-auth.web.app">
+<a target="_blank" href="https://node-autocar-firebase-auth.web.app">
     <p>AutoCar Live Link</p>
 </a>
+
+<p>This website make by react (js framework), Metarial Ui, firebase, Node, Mongo DB and Express js. It is fully dynamic website. its very powerful codeing uses</p>
 
 <h3>Project Details</h3>
 <ul>

@@ -8,7 +8,6 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MoreIcon from '@mui/icons-material/MoreVert';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import { Button } from '@mui/material';
@@ -36,10 +35,6 @@ export default function PrimarySearchAppBar() {
       handleMobileMenuClose();
     };
   
-    const handleMobileMenuOpen = (event) => {
-      setMobileMoreAnchorEl(event.currentTarget);
-    };
-  
     const menuId = 'primary-search-account-menu';
     const renderMenu = (
       <Menu
@@ -62,6 +57,24 @@ export default function PrimarySearchAppBar() {
         </MenuItem>
         <p style={{textTransform: 'capitalize', textAlign: 'center', marginTop: '15px'}}>{user?.displayName}</p>
 
+        <Box className="header-mobile-menu">
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/home" style={{color: '#1976d2', marginRight : '20px'}}>Home</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/cars" style={{color: '#1976d2', marginRight : '20px'}}>All Cars</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/reviews" style={{color: '#1976d2', marginRight : '20px'}}>All Reviews</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/contact" style={{color: '#1976d2', marginRight : '20px'}}>Contact Us</Link>
+            </MenuItem>
+            <MenuItem onClick={handleMenuClose}>
+                <Link to="/about" style={{color: '#1976d2', marginRight : '20px'}}>About Us</Link>
+            </MenuItem>
+        </Box>
+        
         {  !admin && <Box>
             <MenuItem onClick={handleMenuClose}>
                 <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
@@ -94,7 +107,6 @@ export default function PrimarySearchAppBar() {
             </Box>
         }
 
-        
         <MenuItem onClick={handleMenuClose}>
             <Button onClick={logOut} variant="contained">LogOut</Button>
         </MenuItem>
@@ -119,15 +131,6 @@ export default function PrimarySearchAppBar() {
         open={isMobileMenuOpen}
         onClose={handleMobileMenuClose}
       >
-        <MenuItem>
-            <Box className="header-mobile-menu">
-                <Link to="/home" style={{color: '#1976d2', marginRight : '20px'}}>Home</Link>
-                <Link to="/cars" style={{color: '#1976d2', marginRight : '20px'}}>All Cars</Link>
-                <Link to="/reviews" style={{color: '#1976d2', marginRight : '20px'}}>All Reviews</Link>
-                <Link to="/contact" style={{color: '#1976d2', marginRight : '20px'}}>Contact Us</Link>
-                <Link to="/about" style={{color: '#1976d2', marginRight : '20px'}}>About Us</Link>
-            </Box>
-        </MenuItem>
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton
             size="large"
@@ -189,18 +192,6 @@ export default function PrimarySearchAppBar() {
                 :
                 ''
             }
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
           </Box>
         </Toolbar>
       </AppBar>

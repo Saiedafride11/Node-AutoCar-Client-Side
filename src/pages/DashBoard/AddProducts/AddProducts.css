@@ -20,4 +20,9 @@
 
 .add-products::placeholder {
     color: #a5a5a5;
-  }
+}
+@media only screen and (min-width: 280px) and (max-width:992px) {
+    .add-products input{
+        width: 95%;
+    }
+}

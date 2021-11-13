@@ -35,7 +35,7 @@ const AllCars = () => {
 
             <Box sx={{ textAlign: 'center' }}>
                 <Link to="/home" >
-                    <Button variant="contained" sx={{ width: 300 }}>Back Home</Button>
+                    <Button variant="contained" sx={{ width: 270 }}>Back Home</Button>
                 </Link>
             </Box>
         </Box>

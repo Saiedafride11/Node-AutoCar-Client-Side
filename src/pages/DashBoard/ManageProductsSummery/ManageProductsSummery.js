@@ -7,10 +7,10 @@ import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
 import { Button } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTools, faGasPump, faRoad, faCar, faPalette, faCalendarWeek, faStar, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import { faTools, faGasPump, faRoad, faPalette, faCalendarWeek, faStar, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 
 const ManageProductsSummery = (props) => {
-    const {title, petrol, km, manual, type, color, publish, ratting, price, offer, img, _id} = props.car;
+    const {title, petrol, km, manual, color, publish, ratting, price, offer, img, _id} = props.car;
 
     return (
         <Grid item xs={4} sm={4} md={4} className="img-scale-main">
@@ -49,9 +49,6 @@ const ManageProductsSummery = (props) => {
                     </Box>
 
                     <Box sx={{ display: 'flex', mb : 2}}>
-                        <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>
-                            <FontAwesomeIcon icon={faCar} style={{color: '#1976d2'}}/> {type}
-                        </Typography>
                         <Typography variant="body2"  color="text.secondary" sx={{ mr: 3 }}>
                             <FontAwesomeIcon icon={faPalette} style={{color: '#1976d2'}}/> {color}
                         </Typography>

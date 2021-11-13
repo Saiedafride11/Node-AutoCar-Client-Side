@@ -28,6 +28,6 @@
         margin-top: 35px;
     }
     .confirm-order form input, .confirm-order form select, .confirm-order form textarea{
-        width: 100% !important;
+        width: 95% !important;
     }
 }
