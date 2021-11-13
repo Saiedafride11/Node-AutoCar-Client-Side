@@ -25,6 +25,7 @@ const MyOrder = () => {
         setMyOrders(car)
       }, [orders, user.email]);
 
+    // Delete
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')
         if(proceed){

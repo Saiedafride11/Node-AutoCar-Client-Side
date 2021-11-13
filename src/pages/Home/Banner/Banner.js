@@ -29,7 +29,7 @@ const Banner = () => {
                         <h1>BEST PLACE FOR SELL CAR!</h1>
                         <p>We are provide best services. Amet repellendus qui alias neque facere quibusdam ex est.</p>
                         <Link to="/cars">
-    <                       Button variant="contained" sx={{ width: 300 }}>View ALL Car</Button>
+                             <Button variant="contained" sx={{ width: 300 }}>View ALL Car</Button>
                         </Link>
                     </div>
                 </div>

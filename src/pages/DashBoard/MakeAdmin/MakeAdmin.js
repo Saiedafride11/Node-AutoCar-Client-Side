@@ -27,7 +27,7 @@ const MakeAdmin = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount) {
-                    setEmail('');
+                    e.target.reset();
                     setSuccess(true);
                 }
             })
@@ -49,7 +49,7 @@ const MakeAdmin = () => {
                     <br />
                     <Button type="submit" variant="contained">Make Admin</Button>
                 </form>
-                {success && <Alert severity="success">Made Admin successfully!</Alert>}
+                {success && <Alert severity="success">Make Admin successfully!</Alert>}
             </div>
         </div>
     );

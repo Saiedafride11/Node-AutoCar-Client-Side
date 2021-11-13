@@ -12,29 +12,29 @@ const ClientReviewSummery = (props) => {
 
     return (
         <Grid item xs={4} sm={4} md={4} className="img-scale-main">
-         <Card sx={{ minWidth: 275, border: 0, boxShadow: 3}} className="img-scale">
-            <CardMedia
-                component="img"
-                style={{width: '50%', height: '50%', margin: '0 auto'}}
-                image={img}
-                alt="Paella dish"
-                className="ClientReviewSummery mt-4"
-             />
-            <CardContent sx={{ textAlign: 'center' }}>
-                <Typography variant="body2"  color="text.secondary" style={{color: '#6c757d'}}>
-                    {review.slice(0, 120)}
-                </Typography>
-                <Typography variant="body2"  color="text.secondary" style={{color: '#ffb400'}}>
-                    <Rating name="read-only" value={star} readOnly />
-                </Typography>
-                <Typography variant="h6" gutterBottom component="div" style={{color: '#1976d2'}}>
-                    {name}
-                </Typography>
-                <Typography variant="h6" gutterBottom component="div">
-                    {profession}
-                </Typography>
-            </CardContent>
-         </Card>
+            <Card sx={{ minWidth: 275, border: 0, boxShadow: 3}} className="img-scale">
+                <CardMedia
+                    component="img"
+                    style={{width: '50%', height: '50%', margin: '0 auto'}}
+                    image={img}
+                    alt="Paella dish"
+                    className="ClientReviewSummery mt-4"
+                />
+                <CardContent sx={{ textAlign: 'center' }}>
+                    <Typography variant="body2"  color="text.secondary" style={{color: '#6c757d'}}>
+                        {review.slice(0, 120)}
+                    </Typography>
+                    <Typography variant="body2"  color="text.secondary" style={{color: '#ffb400'}}>
+                        <Rating name="read-only" value={star} readOnly />
+                    </Typography>
+                    <Typography variant="h6" gutterBottom component="div" style={{color: '#1976d2'}}>
+                        {name}
+                    </Typography>
+                    <Typography variant="h6" gutterBottom component="div">
+                        {profession}
+                    </Typography>
+                </CardContent>
+            </Card>
         </Grid>
     );
 };

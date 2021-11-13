@@ -9,29 +9,29 @@ const ClientReview = () => {
     const [reviews] = useReview();
     return (
         <Box sx={{ flexGrow: 1, my:5 }}>
-        <Typography sx={{ fontWeight: 600, my: 5, textAlign: 'center' }} style={{color: '#1976d2'}} variant="h4" component="div">
-            HAPPY CLIENTS SAYS
-        </Typography>
+            <Typography sx={{ fontWeight: 600, my: 5, textAlign: 'center' }} style={{color: '#1976d2'}} variant="h4" component="div">
+                HAPPY CLIENTS SAYS
+            </Typography>
 
-        <Container>
-           { 
-                reviews?.length === 0 ?
-                    <h2 style={{ color: '#1976d2', margin: '50px 0', textAlign: 'center'}}>Loading...</h2>
-                :
-                <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mb : 3 }}>
-                    {
-                        reviews?.slice(0, 3).map(review => <ClientReviewSummery review={review} key={review._id}></ClientReviewSummery>)
-                    }
-                </Grid>
-            }
-        </Container>
+            <Container>
+            { 
+                    reviews?.length === 0 ?
+                        <h2 style={{ color: '#1976d2', margin: '50px 0', textAlign: 'center'}}>Loading...</h2>
+                    :
+                    <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ mb : 3 }}>
+                        {
+                            reviews?.slice(0, 3).map(review => <ClientReviewSummery review={review} key={review._id}></ClientReviewSummery>)
+                        }
+                    </Grid>
+                }
+            </Container>
 
-        <Box sx={{ textAlign: 'center' }}>
-            <Link to="/reviews" >
-                <Button variant="contained" sx={{ width: 300 }}>View ALL Review</Button>
-            </Link>
+            <Box sx={{ textAlign: 'center' }}>
+                <Link to="/reviews" >
+                    <Button variant="contained" sx={{ width: 300 }}>View ALL Review</Button>
+                </Link>
+            </Box>
         </Box>
-    </Box>
     );
 };
 

@@ -16,6 +16,7 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
   const auth = getAuth();
 
+  // Create New User
   const registerUser = (email, password, name, history) => {
       setIsLoading(true);
       createUserWithEmailAndPassword(auth, email, password)
@@ -40,6 +41,7 @@ const useFirebase = () => {
           .finally(() => setIsLoading(false));
   }
 
+  // login User
   const loginUser = (email, password, location, history) => {
       setIsLoading(true)
       signInWithEmailAndPassword(auth, email, password)
@@ -54,7 +56,7 @@ const useFirebase = () => {
       .finally( () => setIsLoading(false));
   }
 
-
+    // Google Login
   const signInWithGoogle = (location, history) => {
       setIsLoading(true);
       signInWithPopup(auth, googleProvider)
@@ -94,6 +96,7 @@ const useFirebase = () => {
       .then(data => setAdmin(data.admin))
 }, [user.email])
 
+// Logout User
  const logOut = () => {
   setIsLoading(true)
   signOut(auth).then(() => {
@@ -104,6 +107,7 @@ const useFirebase = () => {
   .finally( () => setIsLoading(false));
 }
 
+// User and and admin added
 const saveUser = (email, displayName, method) => {
   const user = { email, displayName };
   fetch('https://polar-dusk-34230.herokuapp.com/users', {

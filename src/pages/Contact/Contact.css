@@ -1,4 +1,3 @@
-
 .confirm-message input, .confirm-message textarea{
     border: 1px solid #1976d2;
     box-sizing: border-box;
@@ -20,13 +19,6 @@
 .confirm-message ::placeholder {
     color: #a5a5a5 ;
   }
-
-/* .swal2-icon.swal2-success .swal2-success-ring {
-    border: 0.25em solid #1976d2 !important;
-}
-.swal2-icon.swal2-success [class^=swal2-success-line] {
-    background-color: #1976d2 !important;
-} */
 
 .contact-us{
     display: grid;

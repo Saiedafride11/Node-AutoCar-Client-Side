@@ -93,7 +93,7 @@ const CarsDetailsSummery = (props) => {
                         <input defaultValue={user?.email} {...register("email")} readOnly/>
                         <input placeholder="Please Type Your Number....." {...register("phone")} type="number" required/>
                         <select defaultValue="Type" {...register("type", { required: true, maxLength: 20 })}>
-                            <option value="type">Please Select Types.....</option>
+                            <option value="No Select">Please Select Types.....</option>
                             <option value="SPORTS CAR">SPORTS CAR</option>
                             <option value="COUPE">COUPE</option>
                             <option value="SEDAN">SEDAN</option>

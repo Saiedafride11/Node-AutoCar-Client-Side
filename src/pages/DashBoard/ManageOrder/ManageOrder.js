@@ -17,6 +17,7 @@ const ManageOrder = () => {
     const [orders, setOrders] = useOrder()
     
     document.title = "Manage Order";
+    
     // Delete
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, you want to delete?')
@@ -55,7 +56,7 @@ const ManageOrder = () => {
                 const remaining = orders?.filter(order => order._id === id)[0];
                 remaining.status = "Approve";
                 setOrders([...orders]);
-                alert('Updated successfully')
+                alert('Order Successfully Approve')
             }
         })
     }
