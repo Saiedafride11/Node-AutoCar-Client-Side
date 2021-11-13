@@ -52,9 +52,11 @@ export default function PrimarySearchAppBar() {
         open={isMenuOpen}
         onClose={handleMenuClose}
       >
-        <MenuItem onClick={handleMenuClose}>
+        { user?.displayName &&
+          <MenuItem onClick={handleMenuClose}>
             <img src={user?.photoURL} className="w-50 rounded-circle mx-auto" alt="img" />
-        </MenuItem>
+          </MenuItem>
+        }
         <p style={{textTransform: 'capitalize', textAlign: 'center', marginTop: '15px'}}>{user?.displayName}</p>
 
         <Box className="header-mobile-menu">
@@ -73,9 +75,17 @@ export default function PrimarySearchAppBar() {
             <MenuItem onClick={handleMenuClose}>
                 <Link to="/about" style={{color: '#1976d2', marginRight : '20px'}}>About Us</Link>
             </MenuItem>
+              {   
+                  user?.displayName ?
+                  ''
+                  :
+                  <MenuItem onClick={handleMenuClose}>
+                    <Link to="/login" style={{color: '#1976d2', marginRight : '20px'}}>Login</Link>
+                  </MenuItem>
+              }
         </Box>
         
-        {  !admin && <Box>
+        {  user?.displayName && !admin && <Box>
             <MenuItem onClick={handleMenuClose}>
                 <Link to="/payment" style={{color: '#1976d2'}}>Payment</Link>
             </MenuItem>
@@ -107,9 +117,11 @@ export default function PrimarySearchAppBar() {
             </Box>
         }
 
-        <MenuItem onClick={handleMenuClose}>
+        { user?.displayName &&
+          <MenuItem onClick={handleMenuClose}>
             <Button onClick={logOut} variant="contained">LogOut</Button>
         </MenuItem>
+        }
 
       </Menu>
     );
@@ -176,8 +188,6 @@ export default function PrimarySearchAppBar() {
                     <Link to="/login" style={{color: '#fff', marginRight : '20px'}}>Login</Link>
                 }
             </Box>
-            {   
-                user?.displayName ?
                 <IconButton
                 size="large"
                 edge="end"
@@ -189,9 +199,6 @@ export default function PrimarySearchAppBar() {
                 >
                 <AccountCircle />
                 </IconButton>
-                :
-                ''
-            }
           </Box>
         </Toolbar>
       </AppBar>
