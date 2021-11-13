@@ -6,6 +6,9 @@
     display: flex !important;
     align-items: center !important;
 }
+.css-1bigob2{
+    color: #fff !important;
+}
 .swal2-icon.swal2-success .swal2-success-ring {
     border: 0.25em solid #1976d2 !important;
 }

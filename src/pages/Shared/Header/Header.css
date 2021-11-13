@@ -16,6 +16,9 @@
 .css-6hp17o-MuiList-root-MuiMenu-list {
     width: 250px !important;
 }
+.css-r8u8y9{
+    width: 250px !important;
+}
 .css-1guk29 {
     display: flex !important;
     align-items: center !important;
@@ -28,5 +31,8 @@
 @media only screen and (min-width: 280px) and (max-width:899px) {
     .header-menu{
         display: none !important;
+    }
+    .css-1xjb6vl {
+        display: block !important;
     }
 }
