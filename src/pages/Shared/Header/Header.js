@@ -123,7 +123,7 @@ export default function PrimarySearchAppBar() {
             <Box className="header-mobile-menu">
                 <Link to="/home" style={{color: '#1976d2', marginRight : '20px'}}>Home</Link>
                 <Link to="/cars" style={{color: '#1976d2', marginRight : '20px'}}>All Cars</Link>
-                <Link to="/reviews" style={{color: '#1976d2', marginRight : '20px'}}>Review</Link>
+                <Link to="/reviews" style={{color: '#1976d2', marginRight : '20px'}}>All Reviews</Link>
                 <Link to="/contact" style={{color: '#1976d2', marginRight : '20px'}}>Contact Us</Link>
                 <Link to="/about" style={{color: '#1976d2', marginRight : '20px'}}>About Us</Link>
             </Box>
@@ -161,7 +161,7 @@ export default function PrimarySearchAppBar() {
             <Box className="header-menu">
                 <Link to="/home" style={{color: '#fff', marginRight : '20px'}}>Home</Link>
                 <Link to="/cars" style={{color: '#fff', marginRight : '20px'}}>ALL Cars</Link>
-                <Link to="/reviews" style={{color: '#fff', marginRight : '20px'}}>Review</Link>
+                <Link to="/reviews" style={{color: '#fff', marginRight : '20px'}}>All Reviews</Link>
                 <Link to="/contact" style={{color: '#fff', marginRight : '20px'}}>Contact Us</Link>
                 <Link to="/about" style={{color: '#fff', marginRight : '20px'}}>About Us</Link>
                 {   

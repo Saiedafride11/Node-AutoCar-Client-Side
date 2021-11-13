@@ -33,7 +33,7 @@ const ClientReview = () => {
 
             <Box sx={{ textAlign: 'center' }}>
                 <Link to="/reviews" >
-                    <Button variant="contained" sx={{ width: 300 }}>View ALL Review</Button>
+                    <Button variant="contained" sx={{ width: 300 }}>View ALL Reviews</Button>
                 </Link>
             </Box>
         </Box>

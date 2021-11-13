@@ -42,6 +42,7 @@ const Review = () => {
                     <input placeholder="Your Profession" {...register("profession")}/>
                     <select defaultValue="Star" {...register("star", { required: true, maxLength: 20 })}>
                         <option value="type">Please Select Your Review</option>
+                        <option value="0">0</option>
                         <option value="1">1</option>
                         <option value="1">1.5</option>
                         <option value="2">2</option>

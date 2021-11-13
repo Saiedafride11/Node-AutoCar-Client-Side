@@ -46,7 +46,7 @@ const ManageOrder = () => {
 
     // Update 
     const updateInfo = {
-        status: 'Approve',
+        status: 'Shipped ',
     }
     const handleUpdateStatus = id => {
         const url = `https://polar-dusk-34230.herokuapp.com/orders/${id}`;
@@ -61,7 +61,7 @@ const ManageOrder = () => {
         .then(data => {
             if(data.modifiedCount > 0){
                 const remaining = orders?.filter(order => order._id === id)[0];
-                remaining.status = "Approve";
+                remaining.status = "Shipped";
                 setOrders([...orders]);
                 Swal.fire({
                     position: 'center',

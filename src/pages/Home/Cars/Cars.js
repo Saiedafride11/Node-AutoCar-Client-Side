@@ -36,7 +36,7 @@ const Cars = () => {
 
             <Box sx={{ textAlign: 'center' }}>
                 <Link to="/cars" >
-                    <Button variant="contained" sx={{ width: 300 }}>View ALL Car</Button>
+                    <Button variant="contained" sx={{ width: 300 }}>View ALL Cars</Button>
                 </Link>
             </Box>
         </Box>
