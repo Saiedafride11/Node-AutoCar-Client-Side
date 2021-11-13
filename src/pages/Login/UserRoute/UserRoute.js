@@ -6,7 +6,7 @@ import useAuth from '../../../hooks/useAuth';
 
 const UserRoute = ({ children, ...rest }) => {
     const { user, admin, isLoading} = useAuth();
-    if(isLoading){
+    if(isLoading && user){
       return <div className="mx-auto w-50 loading">
               <Box>
                  <LinearProgress />

@@ -167,7 +167,7 @@ export default function PrimarySearchAppBar() {
                 {   
                     user?.displayName ?
                     <>
-                    <span style={{color: 'rgba(255,255,255,.55)'}}>Hello:</span>&nbsp;<span style={{textTransform: 'capitalize'}}>{user?.displayName}</span>
+                    <span style={{color: 'rgba(255,255,255,.55)'}}>Hello:</span>&nbsp;<span style={{textTransform: 'capitalize !important'}}>{user?.displayName}</span>
                     </>
                     :
                     <Link to="/login" style={{color: '#fff', marginRight : '20px'}}>Login</Link>

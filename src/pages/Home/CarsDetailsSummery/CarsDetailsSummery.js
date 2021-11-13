@@ -26,7 +26,7 @@ const CarsDetailsSummery = (props) => {
         .then(res => res.json())
         .then(result => {
             if(result.insertedId){
-                alert('succesfull')
+                alert('Succesfully Submitted Order')
                 reset();
             }
         })

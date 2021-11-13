@@ -62,7 +62,7 @@ const ManageOrder = () => {
 
 
     return (
-        <Container className="manage-order">
+        <Container className="manage-order py-5">
             <TableContainer component={Paper}>
                 {
                     orders?.length === 0 ?

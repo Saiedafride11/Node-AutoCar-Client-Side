@@ -5,16 +5,18 @@
     right: 0;
     z-index: 99;
 }
-.header-menu{
-    margin-top: 12px
-}
+
 .header-mobile-menu{
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
 }
 .css-1futezt-MuiTypography-root{
     display: block !important;
 }
 .css-6hp17o-MuiList-root-MuiMenu-list {
     width: 250px !important;
+}
+.css-1guk29 {
+    display: flex !important;
+    align-items: center !important;
 }
