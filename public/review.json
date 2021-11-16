@@ -1,0 +1,51 @@
+[
+    {
+        "review": "The 2022 Kia Sportage is a small SUV that slots between the smaller Seltos and the three-row Sorento in the South Korean automaker's lineup. The 2022 model closes out the fourth generation of Sportage, which was first introduced in 2017. That makes this Sportage one of the older models in its class, but a wide range of features at an affordable price and a smooth ride help it still be a viable pick.",
+        "star": "4",
+        "name": "Mr Iker Martin",
+        "profession": "Banker",
+        "img": "https://randomuser.me/api/portraits/men/51.jpg"
+    },
+    {
+        "review": "The M4 is a high-performance sport coupe that serves as one of the fastest and most powerful cars in BMW's lineup. Both the M4 and the 4 Series coupe it's based on were completely redesigned for 2021, with new tech and styling backed by the most powerful M4 engine ever. For 2022 the M4 Competition is now available with all-wheel drive.",
+        "star": "5",
+        "name": "Miss Freja Møller",
+        "profession": "Teacher",
+        "img": "https://randomuser.me/api/portraits/women/67.jpg"
+    },
+    {
+        "review": "The luxury compact SUV segment is packed with excellent competitors from various premium brands, but the one Scandinavian model on the list doesn't blend in with its rivals. Since its 2018 redesign, the Volvo XC60 has set itself apart with its unique headlights and taillights, tasteful body lines, and an uncluttered, upscale interior made of high-quality materials. The Swede, though, doesn't have the handling chops of some of its rivals or the softest ride.",
+        "star": "5",
+        "name": "Miss Yasemin Kuru",
+        "profession": "Business Man",
+        "img": "https://randomuser.me/api/portraits/women/75.jpg"
+    },
+    {
+        "review": "one unique thing about the 2022 Nissan Altima is its available variable-compression turbocharged engine, or VC-Turbo. Nissan says it worked on this technology for more than a decade, and that it delivers the power of a V6 engine with the fuel economy of a four-cylinder engine. However, you can only get it with the sporty SR trim and front-wheel drive. And frankly, it comes up short in both the power and real-world efficiency departments.",
+        "star": "5",
+        "name": "Mr Harrison Hall",
+        "profession": "Manager",
+        "img": "https://randomuser.me/api/portraits/men/19.jpg"
+    },
+    {
+        "review": "The phrase game changer gets used a lot, and oftentimes it comes wrapped up with a lot of hyperbole. But the 2022 Rivian R1T is indeed a game changer. It's the first vehicle from this American startup automaker, and it's also the first fully electric pickup truck to hit the market, beating both the Ford F-150 Lightning and Tesla Cybertruck to public streets.",
+        "star": "4",
+        "name": "Mr Fábio De With",
+        "profession": "Banker",
+        "img": "https://randomuser.me/api/portraits/men/18.jpg"
+    },
+    {
+        "review": "Sizewise, the R1T is a bit of a tweener. It's not as big as your average 1500 series full-size crew-cab truck, but it's bigger than any crew-cab truck you'll see in the midsize segment. It also comes in just one body configuration with a 4.5-foot cargo bed. That's short even compared to the beds of midsize trucks, but there are some cool storage features you don't get in a traditional truck such as a large front trunk and a so-called gear tunnel. ",
+        "star": "5",
+        "name": "Ms Juliette Walker",
+        "profession": "Teacher",
+        "img": "https://randomuser.me/api/portraits/women/63.jpg"
+    },
+    {
+        "review": "The R1T is Rivian's first vehicle to market, and it will soon be followed by the R1S, which is the SUV version of the R1T pickup. There's a lot riding on the R1T's success, and thankfully Rivian has nailed it. Whether you're shopping for a pickup, an EV or both, the R1T is well worth considering. Read our test team's Expert Rating to learn more about its performance, utility, Edmunds-tested real-world range and more.",
+        "star": "5",
+        "name": "Miss Julia Lavoie",
+        "profession": "Business Man",
+        "img": "https://randomuser.me/api/portraits/women/43.jpg"
+    }
+]
